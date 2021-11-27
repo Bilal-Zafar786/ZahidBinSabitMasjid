@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data" action="/emp" >
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>Enter Details</h3>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Student Name:</label>
+    <div class="col-sm-4">
+      {{ form.SName }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Student Father</label>
+    <div class="col-sm-4">
+      {{ form.FatherName }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Address</label>
+    <div class="col-sm-4">
+      {{ form.Address }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Cell Number</label>
+    <div class="col-sm-4">
+      {{ form.Cell_Number }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Admission Date</label>
+    <div class="col-sm-4">
+      {{ form.Admission_Date }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Promised Fee</label>
+    <div class="col-sm-4">
+      {{ form.Promised_Fee }}
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">BForm</label>
+    <div class="col-sm-4">
+      {{ form.BForm }}
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+    </div>
+</form>
+{% endblock %}
