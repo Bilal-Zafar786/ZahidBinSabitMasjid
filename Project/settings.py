@@ -78,19 +78,31 @@ WSGI_APPLICATION = 'Project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd84shas501r8gq',
+        'USER': 'udrxdgwdxbtqeh',
+        'PASSWORD': 'e07cd7fa2126762712ce39c6f818ee6b79efb5af3238d7cb12164a5f2b4f35f4',
+        'HOST': 'ec2-54-198-252-9.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
 
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'] = dj_database_url.config(default='postgres://hvloyltjlstxje:ea422e81d30769b76f28a5a834cc0512f38a2172593cbb922f3634d4a577ef08@ec2-54-160-103-135.compute-1.amazonaws.com:5432/dclerp7git26j2')
+DATABASES['default'] = dj_database_url.config(default='postgres://udrxdgwdxbtqeh:e07cd7fa2126762712ce39c6f818ee6b79efb5af3238d7cb12164a5f2b4f35f4@ec2-54-198-252-9.compute-1.amazonaws.com:5432/d84shas501r8gq')
 DATABASES['default'].update(db_from_env)
 
 
